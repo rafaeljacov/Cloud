@@ -11,7 +11,7 @@ templ HomePage() {
         <input type="number" id="budget-amount" placeholder="Amount" required />
         <button type="submit" class="btn btn-success">Add Budget</button>
     </form>
-    <div class="expense-table my-4 relative overflow-x-auto">
+    <div class="budget-table my-4 relative overflow-x-auto">
         <table class="w-full text-md text-left rtl-text-right">
             <thead class="text-sm uppercase bg-gray-50 ">
                 <tr>
@@ -31,8 +31,8 @@ templ HomePage() {
         <input type="number" id="expense-amount" placeholder="Amount" required />
         <button type="submit" class="btn btn-danger">Add Expense</button>
     </form>
-    <div class="expense-table">
-        <table class="w-full text-md text-left rtl-text-right">
+    <div class="expense-table my-4 relative overflow-x-auto">
+        <table class="w-full text-md text-left rtl-text-right ">
             <thead class="text-sm uppercase bg-gray-50 ">
                 <tr>
                     <th scope="col" class="px-6 py-3">Expense Name</th>

@@ -8,6 +8,8 @@ package pages
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
+import "github.com/erik1502/Cloud/web/templates/layouts"
+
 func ImportForm() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
@@ -29,7 +31,25 @@ func ImportForm() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"flex items-center justify-center min-h-screen bg-gray-200\"><div class=\"bg-white p-6 rounded-lg shadow-lg w-96\"><h2 class=\"text-lg font-semibold mb-4\">Import CSV/XLS File</h2><form action=\"/upload\" method=\"post\" enctype=\"multipart/form-data\"><div class=\"mb-4\"><input type=\"file\" name=\"file\" class=\"block w-full border rounded p-2\"></div><div class=\"mb-4\"><label for=\"date-format\" class=\"block text-sm font-medium text-gray-700\">Date format:</label> <input type=\"text\" id=\"date-format\" name=\"date_format\" placeholder=\"DD/MM/YYYY\" class=\"mt-1 block w-full border rounded p-2\"></div><div class=\"mb-4 flex items-center\"><input type=\"checkbox\" id=\"header-row\" name=\"header_row\" class=\"mr-2\"> <label for=\"header-row\" class=\"text-sm text-gray-700\">Header row present</label></div><button type=\"submit\" class=\"w-full bg-black text-white p-2 rounded\">IMPORT</button></form></div></div>")
+		templ_7745c5c3_Var2 := templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+			templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+			templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+			if !templ_7745c5c3_IsBuffer {
+				defer func() {
+					templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+					if templ_7745c5c3_Err == nil {
+						templ_7745c5c3_Err = templ_7745c5c3_BufErr
+					}
+				}()
+			}
+			ctx = templ.InitializeContext(ctx)
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"flex items-center justify-center min-h-screen bg-gray-200\"><div class=\"bg-white p-6 rounded-lg shadow-lg w-96\"><h2 class=\"text-lg font-semibold mb-4\">Import CSV/XLS File</h2><form action=\"/upload\" method=\"post\" enctype=\"multipart/form-data\"><div class=\"mb-4\"><input type=\"file\" name=\"file\" class=\"block w-full border rounded p-2\"></div><div class=\"mb-4\"><label for=\"date-format\" class=\"block text-sm font-medium text-gray-700\">Date format:</label> <input type=\"text\" id=\"date-format\" name=\"date_format\" placeholder=\"DD/MM/YYYY\" class=\"mt-1 block w-full border rounded p-2\"></div><div class=\"mb-4 flex items-center\"><input type=\"checkbox\" id=\"header-row\" name=\"header_row\" class=\"mr-2\"> <label for=\"header-row\" class=\"text-sm text-gray-700\">Header row present</label></div><button type=\"submit\" class=\"w-full bg-black text-white p-2 rounded\">IMPORT</button></form></div></div>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			return nil
+		})
+		templ_7745c5c3_Err = layouts.PageLayout("Import").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

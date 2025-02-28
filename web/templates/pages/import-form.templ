@@ -1,6 +1,9 @@
 package pages
 
+import "github.com/erik1502/Cloud/web/templates/layouts"
+
 templ ImportForm() {
+@layouts.PageLayout("Import") {
 <div class="flex items-center justify-center min-h-screen bg-gray-200">
     <div class="bg-white p-6 rounded-lg shadow-lg w-96">
         <h2 class="text-lg font-semibold mb-4">Import CSV/XLS File</h2>
@@ -21,4 +24,5 @@ templ ImportForm() {
         </form>
     </div>
 </div>
+}
 }

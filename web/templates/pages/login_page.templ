@@ -4,6 +4,8 @@ import "github.com/erik1502/Cloud/web/templates/layouts"
 
 templ LoginPage() {
 	@layouts.PageLayout("Login") {
+
+
 		<h2>Login</h2>
 		<form action="/login" method="POST">
 			<label>
@@ -19,5 +21,8 @@ templ LoginPage() {
 			<button type="submit">Login</button>
 		</form>
 		<p>Not yet Registered? <a href="/register">Register</a></p>
+
+
+
 	}
 }

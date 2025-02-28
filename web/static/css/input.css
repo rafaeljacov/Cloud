@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @theme {
     --color-primary: #0095ff;
     --color-secondary: #dddddd;
@@ -47,3 +48,5 @@
         @apply border-secondary border rounded-md p-3 focus:outline;
     }
 }
+
+

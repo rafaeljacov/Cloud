@@ -27,4 +27,7 @@ go.work.sum
 tmp
 node_modules
 
+# Build files
+build
+
 web/**/*_templ.txt

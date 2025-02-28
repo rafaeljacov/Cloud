@@ -1,0 +1,58 @@
+package pages
+
+import "github.com/erik1502/Cloud/web/templates/layouts"
+
+templ HomePage() {
+	@layouts.PageLayout("Home") {
+		<canvas id="fireworks"></canvas>
+		<div class="container">
+			<h1>Budget Tracker</h1>
+			<h2>Budget</h2>
+			<form id="budget-form">
+				<input type="text" id="budget-name" placeholder="Budget Name" required/>
+				<input type="number" id="budget-amount" placeholder="Amount" required/>
+				<button type="submit">Add Budget</button>
+			</form>
+			<div class="expense-table">
+				<table>
+					<thead>
+						<tr>
+							<th>Source Name</th>
+							<th>Amount</th>
+						</tr>
+					</thead>
+					<tbody id="budget-list"></tbody>
+				</table>
+			</div>
+			<div class="total-amount">
+				Budget Total: $<span id="budget-total">0.00</span>
+			</div>
+			<h2 class="mt">Expenses</h2>
+			<form id="expense-form">
+				<input type="text" id="expense-name" placeholder="Expense Name" required/>
+				<input type="number" id="expense-amount" placeholder="Amount" required/>
+				<button type="submit">Add Expense</button>
+			</form>
+			<div class="expense-table">
+				<table>
+					<thead>
+						<tr>
+							<th>Expense Name</th>
+							<th>Amount</th>
+						</tr>
+					</thead>
+					<tbody id="expense-list"></tbody>
+				</table>
+			</div>
+			<div class="total-amount">
+				Expenses Total: $<span id="expense-total">0.00</span>
+			</div>
+			<h1>Balance</h1>
+			<div class="total-balance">
+				Balance Total: $<span id="balance-total">0.00</span>
+			</div>
+		</div>
+		<script src="/static/js/script.js"></script>
+		<script src="/static/js/fire.js"></script>
+	}
+}

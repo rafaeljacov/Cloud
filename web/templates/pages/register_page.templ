@@ -3,6 +3,7 @@ package pages
 import "github.com/erik1502/Cloud/web/templates/layouts"
 
 templ RegisterPage() {
+
     @layouts.PageLayout("Register") {
         <h2>Register</h2>
         <form action="/register" method="POST">
@@ -25,4 +26,5 @@ templ RegisterPage() {
         </form>
         <p>Already Registered? <a href="/login">Login</a></p>
     }
+
 }

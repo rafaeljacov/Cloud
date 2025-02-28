@@ -60,6 +60,13 @@ func RegisterRoutes(e *echo.Echo) {
 		return c.Redirect(http.StatusSeeOther, "/")
 	})
 
+
+	e.GET("/import", func(c echo.Context) error {
+		return util.Render(c, http.StatusOK, pages.ImportForm())
+	})
+
+
+
 	e.GET("/register", func(c echo.Context) error {
 		return util.Render(c, http.StatusOK, pages.RegisterPage())
 	})

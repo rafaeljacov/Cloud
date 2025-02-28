@@ -12,11 +12,6 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
-type MockUserStore struct {
-	username string
-	password string
-}
-
 func main() {
 	// Load environment variables from .env file
 	// if err := godotenv.Load(); err != nil {

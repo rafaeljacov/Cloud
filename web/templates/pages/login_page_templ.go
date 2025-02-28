@@ -43,7 +43,7 @@ func LoginPage() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<h2>Login</h2><form action=\"/login\" method=\"POST\"><label>Username:<br><input type=\"text\" name=\"username\" placeholder=\"johndoe123\"></label> <label>Password:<br><input type=\"password\" name=\"password\" placeholder=\"Password\"></label> <button type=\"submit\">Login</button></form><p>Not yet Registered? <a href=\"/register\">Register</a></p>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<h2>Login</h2><form action=\"/login\" method=\"POST\"><label>Username:<br><input required type=\"text\" name=\"username\" placeholder=\"johndoe123\"></label> <label>Password:<br><input required type=\"password\" name=\"password\" placeholder=\"Password\"></label> <button type=\"submit\">Login</button></form><p>Not yet Registered? <a href=\"/register\">Register</a></p>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

@@ -12,6 +12,11 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
+type MockUserStore struct {
+    username string
+    password string
+}
+
 func main() {
 	// Load environment variables from .env file
 	// if err := godotenv.Load(); err != nil {
@@ -31,6 +36,11 @@ func main() {
 	e.GET("/", func(c echo.Context) error {
         return util.Render(c, http.StatusOK, pages.HomePage())
 	})
+
+    e.GET("/login", func(c echo.Context) error {
+
+        return util.Render(c, http.StatusOK, pages.LoginPage())
+    })
 
 	// Serve static files
 	e.Static("/static", "web/static")

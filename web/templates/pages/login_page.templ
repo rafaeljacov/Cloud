@@ -1,0 +1,13 @@
+package pages
+
+import "github.com/erik1502/Cloud/web/templates/layouts"
+
+templ LoginPage() {
+	@layouts.PageLayout("Login") {
+		<form action="/login" method="POST">
+			<input type="text" name="username" placeholder="johndoe123"/>
+			<br/>
+			<input type="password" name="password" placeholder="Password"/>
+		</form>
+	}
+}

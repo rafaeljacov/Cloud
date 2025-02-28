@@ -2,10 +2,10 @@ package pages
 
 import "github.com/erik1502/Cloud/web/templates/layouts"
 
-templ LoginPage() {
-	@layouts.PageLayout("Login") {
-        <h2>Login</h2>
-		<form action="/login" method="POST">
+templ RegisterPage() {
+    @layouts.PageLayout("Register") {
+        <h2>Register</h2>
+        <form action="/login" method="POST">
             <label>
                 Username:
                 <br>
@@ -16,6 +16,11 @@ templ LoginPage() {
                 <br>
                 <input type="password" name="password" placeholder="Password" />
             </label>
-		</form>
-	}
+            <label>
+                Confirm Password:
+                <br>
+                <input type="confirm_password" name="confirm_password" placeholder="Password" />
+            </label>
+        </form>
+    }
 }

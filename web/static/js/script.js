@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         displayExpenses();
         updateTotals();
 
-        e.target.reset();
+        expenseForm.reset();
     });
 
     // Display Budget Entries

@@ -2,19 +2,19 @@ package main
 
 import (
 	// "log"
-	"net/http"
+
 	"os"
 
 	// "github.com/joho/godotenv"
-	"github.com/erik1502/Cloud/web/templates/pages"
-	"github.com/erik1502/Cloud/web/templates/util"
+
+	"github.com/erik1502/Cloud/internal/routes"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
 
 type MockUserStore struct {
-    username string
-    password string
+	username string
+	password string
 }
 
 func main() {
@@ -33,14 +33,7 @@ func main() {
 		PORT = "8080" // Default to 8080 if not set
 	}
 
-	e.GET("/", func(c echo.Context) error {
-        return util.Render(c, http.StatusOK, pages.HomePage())
-	})
-
-    e.GET("/login", func(c echo.Context) error {
-
-        return util.Render(c, http.StatusOK, pages.LoginPage())
-    })
+    routes.RegisterRoutes(e)
 
 	// Serve static files
 	e.Static("/static", "web/static")

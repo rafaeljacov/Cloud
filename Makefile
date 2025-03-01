@@ -14,8 +14,13 @@ build/templ: templ
 # build/sqlc: sqlc $(wildcard *.sql) sqlc.yaml
 # 	sqlc generate
 
+bundle: build
+	zip -r app.zip web/static/ build/
+
 clean:
 	rm $(BIN)
+	rm app.zip
 
 cleanall:
 	rm -rf $(shell dirname $(BIN))/*
+	rm app.zip

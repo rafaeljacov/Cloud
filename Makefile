@@ -4,11 +4,11 @@ BIN=build/bin/app
 
 build: build/tailwind build/templ go.sum go.mod main.go zip
 	GOOS=linux GOARCH=amd64 go build -o $(BIN)
-	mkdir -p app/web
-	cp -r build app
-	cp -r web/static app/web
+	@mkdir -p app/web
+	@cp -r build app
+	@cp -r web/static app/web
 	zip -r build/app.zip app
-	rm -rf app
+	@rm -rf app
 
 build/tailwind: tailwindcss
 	tailwindcss -i web/static/css/input.css -o web/static/css/output.css

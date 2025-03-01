@@ -33,8 +33,6 @@ func RegisterRoutes(e *echo.Echo) {
 		}
 	})
 
-	protected.Use()
-
 	protected.GET("/", func(c echo.Context) error {
 		return util.Render(c, http.StatusOK, pages.HomePage())
 	})

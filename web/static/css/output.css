@@ -30,8 +30,6 @@
     --default-mono-font-variation-settings: var(--font-mono--font-variation-settings);
     --color-primary: #0095ff;
     --color-secondary: #dddddd;
-    --color-success: #48a64c;
-    --color-danger: #e94134;
     --color-line: #848484;
     --font-poppins: "Poppins", sans-serif;
     --font-public-sans: "Public Sans", sans-serif;
@@ -462,22 +460,9 @@
 }
 @layer components {
   button.btn {
-    cursor: pointer;
-    border-radius: var(--radius-lg);
-    --tw-border-style: none;
-    border-style: none;
-    padding-inline: calc(var(--spacing) * 5);
-    padding-block: calc(var(--spacing) * 3);
     font-family: var(--font-public-sans);
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
-  }
-  button.btn-success {
-    background-color: var(--color-success);
-    color: var(--color-white);
-  }
-  button.btn-danger {
-    background-color: var(--color-danger);
     color: var(--color-white);
   }
   input {

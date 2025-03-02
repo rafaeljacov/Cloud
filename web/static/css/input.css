@@ -4,10 +4,9 @@
 @theme {
     --color-primary: #0095ff;
     --color-secondary: #dddddd;
-    --color-white: #fff;
     --color-dark: #252525;
     --color-success: #48a64c;
-    --color-danger: #e94134;
+    --color-error: #e94134;
     --color-line: #848484;
 
     --font-poppins: "Poppins", sans-serif;
@@ -36,15 +35,7 @@
 
 @layer components {
     button.btn {
-        @apply font-public-sans font-semibold py-3 px-5 rounded-lg cursor-pointer border-none;
-    }
-
-    button.btn-success {
-        @apply bg-success text-white;
-    }
-
-    button.btn-danger {
-        @apply bg-danger text-white;
+        @apply font-public-sans font-semibold text-white
     }
 
     input {

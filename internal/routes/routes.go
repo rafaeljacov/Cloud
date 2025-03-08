@@ -102,7 +102,7 @@ func mockSession(c echo.Context, username string) {
 	cookie := new(http.Cookie)
 	cookie.Name = "username"
 	cookie.Value = username
-	cookie.Secure = true
+	cookie.Secure = false
 
 	c.SetCookie(cookie)
 }
